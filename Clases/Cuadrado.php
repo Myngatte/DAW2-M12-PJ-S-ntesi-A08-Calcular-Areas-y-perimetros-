@@ -1,7 +1,7 @@
 <?php
 class Cuadrado extends FiguraGeometrica {
-    public function __construct($tipoFigura, $lado) {
-        parent::__construct($tipoFigura, $lado);
+    public function __construct($tipoFigura, $lado1) {
+        parent::__construct($tipoFigura, $lado1);
     }
 
     // Destructor

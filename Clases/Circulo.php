@@ -4,7 +4,7 @@ class Circulo extends FiguraGeometrica {
 
     // Constructor
     public function __construct($tipoFigura, $radio) {
-        parent::__construct($tipoFigura, $radio); 
+        parent::__construct($tipoFigura); 
         $this->radio = $radio; 
     }
 
