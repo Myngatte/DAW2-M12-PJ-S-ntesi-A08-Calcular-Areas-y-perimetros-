@@ -2,28 +2,22 @@
 // Iniciar sesión
 session_start();
 
-// Incluir las clases 
-require '../Clases/FiguraGeometrica.php';
-require '../Clases/Circulo.php';
-
-// Inicializar variables
-$radio = "";
-$area = "";
-$perimetro = "";
-$mensajeError = "";
-
-// Verificar si se ha pasado el radio desde la sesión
-if (isset($_SESSION['radio']) && is_numeric($_SESSION['radio']) && $_SESSION['radio'] > 0) {
+// Verificar si se ha definido el radio del círculo en la sesión
+if (isset($_SESSION['radio'])) {
     $radio = $_SESSION['radio'];
-    
-    // Crear un objeto de la clase Circulo
+
+    // Incluir la clase Círculo
+    require '../Clases/FiguraGeometrica.php';
+    require '../Clases/Circulo.php';
+
+    // Crear una instancia del círculo
     $circulo = new Circulo("Círculo", $radio);
-    
-    // Calcular área y perímetro
+
+    // Cálculo del área y el perímetro
     $area = $circulo->calcularArea();
     $perimetro = $circulo->calcularPerimetre();
 } else {
-    $mensajeError = "Error: Parámetro de radio no válido.";
+    $radio = null;
 }
 ?>
 
@@ -33,25 +27,34 @@ if (isset($_SESSION['radio']) && is_numeric($_SESSION['radio']) && $_SESSION['ra
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados del Círculo</title>
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Enlace al archivo de estilos personalizado -->
     <link rel="stylesheet" href="../Estilos/styles.css"> 
 </head>
 <body>
     <div class="container mt-5">
         <h1>Resultados del Círculo</h1>
         
-        <?php if ($mensajeError): ?>
-            <div class="alert alert-danger"><?php echo $mensajeError; ?></div>
+        <?php if ($radio): ?>
+            <div class="alert alert-success" role="alert">
+                <p><strong>Radio:</strong> <?php echo htmlspecialchars($radio); ?></p>
+                <p><strong>Área:</strong> <?php echo number_format($area, 2); ?></p>
+                <p><strong>Perímetro:</strong> <?php echo number_format($perimetro, 2); ?></p>
+            </div>
         <?php else: ?>
-            <h2>Resultados:</h2>
-            <p>Radio: <?php echo htmlspecialchars($radio); ?></p>
-            <p>Área: <?php echo $area; ?></p>
-            <p>Perímetro: <?php echo $perimetro; ?></p>
+            <div class="alert alert-danger" role="alert">
+                No se ha proporcionado un radio válido para el círculo.
+            </div>
         <?php endif; ?>
-        
-        <form action="Ocirculo.php" method="get">
-            <button type="submit" class="btn btn-secondary mt-3">Volver</button>
-        </form>
+
+        <!-- Botón para regresar al formulario -->
+        <a href="OCirculo.php" class="btn btn-primary mt-3">Volver al formulario</a>
+        <button type="button" class="btn btn-danger mt-3" onclick="window.location.href='index.php'">
+            Volver al inicio
+        </button>
     </div>
 
     <!-- Bootstrap JS (opcional) -->

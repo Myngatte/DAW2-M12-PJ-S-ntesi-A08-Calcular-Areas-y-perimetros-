@@ -53,9 +53,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="radio">Ingrese el radio:</label>
                 <input type="text" class="form-control" id="radio" name="radio" value="<?php echo htmlspecialchars($radio); ?>" onblur="return validarCirculo()">
-                <div id="error-message" class="text-danger mt-2"></div> <!-- Mensaje de error -->
+                <div id="error-Circulo" class="text-danger mt-2"></div> <!-- Mensaje de error -->
             </div>
             <button type="submit" class="btn btn-primary">Calcular</button>
+            <button type="button" class="btn btn-danger" onclick="window.location.href='index.php'">
+            Volver
+            </button>
         </form>
     </div>
 

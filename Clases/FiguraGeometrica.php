@@ -11,7 +11,7 @@ class FiguraGeometrica {
 
     // Destruct
     public function __destruct() {
-        echo "Destruïdo: " . $this->tipoFigura . "\n";
+        // echo "Destruïdo: " . $this->tipoFigura . "\n";
     }
 
     // Getters

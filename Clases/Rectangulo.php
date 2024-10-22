@@ -10,7 +10,7 @@ class Rectangulo extends FiguraGeometrica {
 
     // Destructor
     public function __destruct() {
-        echo "Destruir rectángulo\n";
+        // echo "Destruir rectángulo";
     }
 
     // Getters i Setters

@@ -6,7 +6,7 @@ class Cuadrado extends FiguraGeometrica {
 
     // Destructor
     public function __destruct() {
-        echo "Destruir cuadrado\n";
+        // echo "Destruir cuadrado";
     }
 
     // Area
@@ -16,7 +16,7 @@ class Cuadrado extends FiguraGeometrica {
 
     // perimetro
     public function calcularPerimetre() {
-        return 4 * $this->getLado1(); // Perímetre = 4 * costat
+        return 4 * $this->getLado1();
     }
 
     // Metodo magico

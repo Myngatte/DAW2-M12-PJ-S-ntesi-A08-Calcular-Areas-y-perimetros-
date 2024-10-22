@@ -10,7 +10,7 @@ class Circulo extends FiguraGeometrica {
 
     // Destructor
     public function __destruct() {
-        // echo "Destruir círculo\n";
+        // echo "Destruir círculo";
     }
 
     // Getters i Setters 
