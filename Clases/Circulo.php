@@ -4,13 +4,13 @@ class Circulo extends FiguraGeometrica {
 
     // Constructor
     public function __construct($tipoFigura, $radio) {
-        parent::__construct($tipoFigura); 
+        parent::__construct($tipoFigura, $radio); 
         $this->radio = $radio; 
     }
 
     // Destructor
     public function __destruct() {
-        echo "Destruir círculo\n";
+        // echo "Destruir círculo\n";
     }
 
     // Getters i Setters 
