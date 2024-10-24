@@ -46,8 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Triángulo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../Estilos/styles.css">
-    <script src="../JS/Validar.js" defer></script> 
+    <script src="../JS/Validar.js"></script> 
 </head>
 <body>
     <div class="container mt-5">
@@ -65,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div id="error-tlado2" class="text-danger mt-2"></div>
             </div>
             <div class="form-group">
-                <label for="tlado3">Ingrese el tercer lado:</label> <!-- Corregido para reflejar el tercer lado -->
+                <label for="tlado3">Ingrese el tercer lado:</label> 
                 <input type="text" class="form-control" id="tlado3" name="tlado3" value="<?php echo htmlspecialchars($tlado3); ?>" onblur="return validarTriangulo3()">
                 <div id="error-tlado3" class="text-danger mt-2"></div>
             </div>
@@ -73,8 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="button" class="btn btn-danger" onclick="window.location.href='index.php'">Volver</button>
         </form>
     </div>
-
-    <!-- Bootstrap JS (opcional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

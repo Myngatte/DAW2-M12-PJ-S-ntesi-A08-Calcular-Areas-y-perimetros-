@@ -103,3 +103,34 @@ function validarTriangulo3() {
     return true; 
 }
 
+// -------------------------------------------------- Sweetalert
+// circulo
+
+function Validardatos(event){
+    if (isNaN(radioValue) || radioValue <= 0) {
+        event.preventdefault();
+        let timerInterval;
+        Swal.fire({
+          title: "¡Algo esta mal!",
+          html: "Se cierra en <b></b> milliseconds.",
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+            const timer = Swal.getPopup().querySelector("b");
+            timerInterval = setInterval(() => {
+              timer.textContent = `${Swal.getTimerLeft()}`;
+            }, 100);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log("I was closed by the timer");
+          }
+        });
+    }
+    return true; // OK
+}

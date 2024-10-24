@@ -34,14 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Cuadrado</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../Estilos/styles.css"> 
-    <script src="../JS/Validar.js" defer></script> 
+    <script src="../JS/Validar.js"></script> 
 </head>
 <body>
     <div class="container mt-5">
         <h1>Cálculo de Área y Perímetro de un Cuadrado</h1>
         
-        <form method="post" action="Ocuadrado.php" id="formCuadrado" > <!-- Agregar id al formulario -->
+        <form method="post" action="Ocuadrado.php" id="formCuadrado" > 
             <div class="form-group">
                 <label for="lado">Ingrese el lado del cuadrado:</label>
                 <input type="text" class="form-control" id="lado" name="lado" value="<?php echo htmlspecialchars($lado); ?>" onblur="return validarCuadrado()">

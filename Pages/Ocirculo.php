@@ -34,8 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Círculo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../Estilos/styles.css"> 
-    <script src="../JS/Validar.js" defer></script> 
+    <script src="../JS/Validar.js"></script> 
 </head>
 <body>
     <div class="container mt-5">
@@ -45,9 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="radio">Ingrese el radio:</label>
                 <input type="text" class="form-control" id="radio" name="radio" value="<?php echo htmlspecialchars($radio); ?>" onblur="return validarCirculo()">
-                <div id="error-Circulo" class="text-danger mt-2"></div> <!-- Mensaje de error -->
+                <div id="error-Circulo" class="text-danger mt-2"></div> 
             </div>
-            <button type="submit" class="btn btn-primary">Calcular</button>
+            <button type="submit" class="btn btn-primary" >Calcular</button>
             <button type="button" class="btn btn-danger" onclick="window.location.href='index.php'">
             Volver
             </button>
