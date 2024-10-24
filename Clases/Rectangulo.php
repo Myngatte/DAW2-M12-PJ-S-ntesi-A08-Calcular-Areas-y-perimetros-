@@ -35,9 +35,9 @@ class Rectangulo extends FiguraGeometrica {
     // Metodo magico
     public function __toString() {
         return "Figura: " . $this->getTipoFigura() . "<br>" .
-               "Lados: " . $this->getLado1() . ", " . $this->lado2 . "<br>" .
-               "Área: " . $this->calcularArea() . "<br>" .
-               "Perímetre: " . $this->calcularPerimetre() . "<br>";
+               "Lados: " . $this->getLado1() . " Unidades, " . $this->lado2 . " Unidades <br>" .
+               "Área: " . $this->calcularArea() . " Unidades Cuadradas <br>" .
+               "Perímetre: " . $this->calcularPerimetre() . " Unidades <br>";
     }
 }
 ?>

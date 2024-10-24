@@ -34,10 +34,10 @@ class Circulo extends FiguraGeometrica {
 
     // Metodo magico
     public function __toString() {
-        return "Figura: " . $this->getTipoFigura() . "<br>" .
-               "Radio: " . $this->radio . "<br>" .
-               "Área: " . $this->calcularArea() . "<br>" .
-               "Perímetre: " . $this->calcularPerimetre() . "<br>";
+        return "Figura: " . $this->getTipoFigura()  ."<br>" .
+               "Radio: " . $this->radio . " Unidades <br>" .
+               "Área: " . $this->calcularArea() . " Unidades cuadradas  <br>" .
+               "Perímetre: " . $this->calcularPerimetre() . " Unidades <br>";
     }
 }
 ?>
