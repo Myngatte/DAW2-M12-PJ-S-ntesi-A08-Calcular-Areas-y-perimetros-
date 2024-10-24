@@ -21,23 +21,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Guardar los lados en la sesión
         $_SESSION['tlado1'] = $tlado1;
         $_SESSION['tlado2'] = $tlado2;
-        $_SESSION['tlado3'] = $tlado3;  // Corrección: ahora guarda correctamente el tercer lado
-
-        // Redirigir a ResultadoTriangulo.php con los lados como parámetros
+        $_SESSION['tlado3'] = $tlado3;  
         header("Location: ResultadoTriangulo.php");
         exit();
     }
 } else {
-    // Recuperar los valores de los lados de la sesión si están establecidos
+    // Recuperar los valores de los lados de la sesión 
     if (isset($_SESSION['tlado1'])) {
         $tlado1 = $_SESSION['tlado1'];
     }
     if (isset($_SESSION['tlado2'])) {
         $tlado2 = $_SESSION['tlado2'];
-    }
+    } 
     if (isset($_SESSION['tlado3'])) {
-        $tlado3 = $_SESSION['tlado3']; // Aquí también había un error: $tlado3 ahora se recupera correctamente
-    }
+        $tlado3 = $_SESSION['tlado3']; 
+    } 
 }
 ?>
 
@@ -55,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container mt-5">
         <h1>Cálculo de Área y Perímetro de un Triángulo</h1>
         
-        <form method="post" action="" id="formTriangulo">
+        <form method="post" action="Otriangulo.php" id="formTriangulo">
             <div class="form-group">
                 <label for="tlado1">Ingrese el primer lado:</label>
                 <input type="text" class="form-control" id="tlado1" name="tlado1" value="<?php echo htmlspecialchars($tlado1); ?>" onblur="return validarTriangulo()">

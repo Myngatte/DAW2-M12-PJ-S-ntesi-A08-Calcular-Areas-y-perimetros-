@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if (isset($_SESSION['lado2'])) {
         $lado2 = $_SESSION['lado2'];
-    }
+    } 
 }
 ?>
 
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container mt-5">
         <h1>Cálculo de Área y Perímetro de un Rectángulo</h1>
         
-        <form method="post" action="" id="formRectangulo">
+        <form method="post" action="Orectangulo.php" id="formRectangulo">
             <div class="form-group">
                 <label for="lado1">Ingrese el primer lado:</label>
                 <input type="text" class="form-control" id="lado1" name="lado1" value="<?php echo htmlspecialchars($lado1); ?>" onblur="return validarRectangulo()">
@@ -64,8 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="button" class="btn btn-danger" onclick="window.location.href='index.php'">Volver</button>
         </form>
     </div>
-
-    <!-- Bootstrap JS (opcional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

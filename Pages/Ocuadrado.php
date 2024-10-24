@@ -20,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 } else {
-    // Recuperar el valor del lado de la sesión si está establecido
+    // Recuperar el valor del lado de la sesión 
     if (isset($_SESSION['lado'])) {
         $lado = $_SESSION['lado'];
-    }
+    } 
 }
 ?>
 
@@ -33,24 +33,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Cuadrado</title>
-    
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-    <!-- Enlace al archivo de estilos personalizado -->
     <link rel="stylesheet" href="../Estilos/styles.css"> 
-    
-    <!-- Enlace a la validación de JavaScript -->
     <script src="../JS/Validar.js" defer></script> 
 </head>
 <body>
     <div class="container mt-5">
         <h1>Cálculo de Área y Perímetro de un Cuadrado</h1>
         
-        <form method="post" action="" id="formCuadrado"> <!-- Agregar id al formulario -->
+        <form method="post" action="Ocuadrado.php" id="formCuadrado" > <!-- Agregar id al formulario -->
             <div class="form-group">
                 <label for="lado">Ingrese el lado del cuadrado:</label>
-                <input type="text" class="form-control" id="lado" name="lado" value="<?php echo htmlspecialchars($lado); ?>" required onblur="return validarCuadrado()">
+                <input type="text" class="form-control" id="lado" name="lado" value="<?php echo htmlspecialchars($lado); ?>" onblur="return validarCuadrado()">
                 <div id="error-Cuadrado" class="text-danger mt-2"></div>
             </div>
             <button type="submit" class="btn btn-primary">Calcular</button>
