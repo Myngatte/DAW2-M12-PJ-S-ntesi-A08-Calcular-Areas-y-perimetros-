@@ -37,8 +37,9 @@ if (isset($_SESSION['lado'])) {
 <body>
     <div class="container mt-5">
         <h1>Resultados del Cuadrado</h1>
+
             <div class="alert alert-success" role="alert">
-                <p><?php echo htmlspecialchars($cuadrado); ?></p>
+                <?php echo ($cuadrado); ?>
             </div>
         <a href="OCuadrado.php" class="btn btn-primary mt-3">Volver al formulario</a>
         <button type="button" class="btn btn-danger mt-3" onclick="window.location.href='index.php'">

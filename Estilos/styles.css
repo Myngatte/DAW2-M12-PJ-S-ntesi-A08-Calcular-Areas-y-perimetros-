@@ -35,25 +35,25 @@ body {
     align-items: center; /* Centrar contenido verticalmente */
 }
 
-/* Estilo para la figura cuadrada (arriba izquierda) */
+/* Cuadrado */
 .cuadrado {
     top: 10%; /* Espaciado desde la parte superior */
     left: 10%; /* Espaciado desde la izquierda */
 }
 
-/* Estilo para la figura triangular (arriba derecha) */
+/* Triangulo */
 .triangulo {
     top: 10%; /* Espaciado desde la parte superior */
     right: 10%; /* Espaciado desde la derecha */
 }
 
-/* Estilo para la figura circular (abajo izquierda) */
+/* Circulo */
 .circulo {
     bottom: 10%; /* Espaciado desde la parte inferior */
     left: 10%; /* Espaciado desde la izquierda */
 }
 
-/* Estilo para la figura rectangular (abajo derecha) */
+/* Rectangulo */
 .rectangulo {
     bottom: 10%; /* Espaciado desde la parte inferior */
     right: 10%; /* Espaciado desde la derecha */
@@ -65,15 +65,15 @@ button {
     border: none;
     padding: 0;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 button img {
-    width: 300px; /* Tamaño ajustado para las imágenes */
+    width: 300px; 
     height: 300px;
     object-fit: contain; /* Mantener proporción */
-    border-radius: 15px; /* Bordes ligeramente redondeados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra alrededor de las imágenes */
+    border-radius: 15px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 

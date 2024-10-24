@@ -21,10 +21,10 @@ class Cuadrado extends FiguraGeometrica {
 
     // Metodo magico
     public function __toString() {
-        return "Figura: " . $this->getTipoFigura() . "\n" .
-               "Lado: " . $this->getLado1() . "\n" .
-               "Área: " . $this->calcularArea() . "\n" .
-               "Perímetre: " . $this->calcularPerimetre() . "\n";
+        return "Figura: " . $this->getTipoFigura() . "<br>" .
+               "Lado: " . $this->getLado1() . "<br>" .
+               "Área: " . $this->calcularArea() . "<br>" .
+               "Perímetre: " . $this->calcularPerimetre() . "<br>";
     }
 }
 ?>

@@ -39,7 +39,7 @@ if (isset($_SESSION['radio'])) {
         <h1>Resultados del Círculo</h1>
         
             <div class="alert alert-success" role="alert">
-                <p> <?php echo htmlspecialchars($circulo); ?></p>
+                <?php echo ($circulo); ?>
             </div>
         <a href="OCirculo.php" class="btn btn-primary mt-3">Volver al formulario</a>
         <button type="button" class="btn btn-danger mt-3" onclick="window.location.href='index.php'">

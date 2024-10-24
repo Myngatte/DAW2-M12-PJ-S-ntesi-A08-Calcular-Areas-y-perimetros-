@@ -40,9 +40,8 @@ if (isset($_SESSION['lado1']) && isset($_SESSION['lado2'])) {
     <div class="container mt-5">
         <h1>Resultados del Rectángulo</h1>
         
-
-            <div class="alert alert-success" role="alert">
-                <p> <?php echo htmlspecialchars($rectangulo); ?></p>
+        <div class="alert alert-success" role="alert">
+                <?php echo ($rectangulo); ?>
             </div>
         <a href="Orectangulo.php" class="btn btn-primary mt-3">Volver al formulario</a>
         <button type="button" class="btn btn-danger mt-3" onclick="window.location.href='index.php'">

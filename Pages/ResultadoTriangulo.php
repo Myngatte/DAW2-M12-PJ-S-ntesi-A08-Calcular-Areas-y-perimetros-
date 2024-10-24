@@ -42,9 +42,8 @@ if (isset($_SESSION['tlado1']) && isset($_SESSION['tlado2']) && isset($_SESSION[
     <div class="container mt-5">
         <h1>Resultados del Triángulo</h1>
         
-
-            <div class="alert alert-success" role="alert">
-                <p><?php echo htmlspecialchars($triangulo); ?></p>
+        <div class="alert alert-success" role="alert">
+                <?php echo ($triangulo); ?>
             </div>
         <a href="OTriangulo.php" class="btn btn-primary mt-3">Volver al formulario</a>
         <button type="button" class="btn btn-danger mt-3" onclick="window.location.href='index.php'">

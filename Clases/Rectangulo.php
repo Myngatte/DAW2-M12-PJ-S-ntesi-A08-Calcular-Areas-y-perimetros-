@@ -34,10 +34,10 @@ class Rectangulo extends FiguraGeometrica {
 
     // Metodo magico
     public function __toString() {
-        return "Figura: " . $this->getTipoFigura() . "\n" .
-               "Lados: " . $this->getLado1() . ", " . $this->lado2 . "\n" .
-               "Área: " . $this->calcularArea() . "\n" .
-               "Perímetre: " . $this->calcularPerimetre() . "\n";
+        return "Figura: " . $this->getTipoFigura() . "<br>" .
+               "Lados: " . $this->getLado1() . ", " . $this->lado2 . "<br>" .
+               "Área: " . $this->calcularArea() . "<br>" .
+               "Perímetre: " . $this->calcularPerimetre() . "<br>";
     }
 }
 ?>
