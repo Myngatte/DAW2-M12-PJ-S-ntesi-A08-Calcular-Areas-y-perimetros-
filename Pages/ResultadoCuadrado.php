@@ -37,27 +37,14 @@ if (isset($_SESSION['lado'])) {
 <body>
     <div class="container mt-5">
         <h1>Resultados del Cuadrado</h1>
-        
-        <?php if ($lado): ?>
             <div class="alert alert-success" role="alert">
-                <p><strong>Lado:</strong> <?php echo htmlspecialchars($lado); ?></p>
-                <p><strong>Área:</strong> <?php echo number_format($area, 2); ?></p>
-                <p><strong>Perímetro:</strong> <?php echo number_format($perimetro, 2); ?></p>
+                <p><?php echo htmlspecialchars($cuadrado); ?></p>
             </div>
-        <?php else: ?>
-            <div class="alert alert-danger" role="alert">
-                No se ha proporcionado un lado válido para el cuadrado.
-            </div>
-        <?php endif; ?>
-
-        <!-- Botón para regresar al formulario -->
         <a href="OCuadrado.php" class="btn btn-primary mt-3">Volver al formulario</a>
         <button type="button" class="btn btn-danger mt-3" onclick="window.location.href='index.php'">
             Volver al inicio
         </button>
     </div>
-
-    <!-- Bootstrap JS (opcional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
